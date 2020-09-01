@@ -15,7 +15,7 @@ module RuboCop
       #   # good
       #   it 'raises an error when the category is unknown'
       #
-      class NoIfInTestDescriptions < Base
+      class NoIfInTestDescriptions < Cop
         MSG = 'Test descriptions should not include "if", use "when" instead'.freeze
 
         def on_send(node)
