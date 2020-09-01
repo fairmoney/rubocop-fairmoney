@@ -8,16 +8,16 @@ RSpec.describe RuboCop::Cop::Fairmoney::NoIfInTestDescriptions do
   # TODO: Write test code
   #
   # For example
-  it 'registers an offense when using `#bad_method`' do
+  it 'registers an offense when using "if" in a test description' do
     expect_offense(<<~RUBY)
-      bad_method
-      ^^^^^^^^^^ Use `#good_method` instead of `#bad_method`.
+      it 'does X if Y' do; end;
+         ^^^^^^^^^^^^^ Test descriptions should not include "if", use "when" instead
     RUBY
   end
 
-  it 'does not register an offense when using `#good_method`' do
+  it 'does not register an offense when using "when" in a test description' do
     expect_no_offenses(<<~RUBY)
-      good_method
+      it 'does X when Y' do; end;
     RUBY
   end
 end

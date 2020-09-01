@@ -38,7 +38,7 @@ module RuboCop
 
         def parse_description(node, description_line)
           return unless description_line.include?(' if ')
-          add_offense(node, location: :expression)
+          add_offense(node)
         end
       end
     end
