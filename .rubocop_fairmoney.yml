@@ -1,2 +1,7 @@
 require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rake
+  - rubocop-rspec
+  - rubocop-thread_safety
   - ./lib/rubocop-fairmoney.rb
