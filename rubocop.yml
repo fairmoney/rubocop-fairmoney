@@ -1,0 +1,3 @@
+inherit_from:
+  - .rubocop_fairmoney.yml
+  - ./config/default.yml
