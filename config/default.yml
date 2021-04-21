@@ -34,7 +34,7 @@ Metrics/BlockLength:
     - 'config/environments/*.rb'
     - 'config/routes.rb'
     - 'db/migrate/*_init_schema.rb'
-  ExcludedMethods:
+  IgnoredMethods:
     - 'describe'
     - 'context'
 
