@@ -7,6 +7,7 @@ PATH
       rubocop-rails
       rubocop-rake
       rubocop-rspec
+      rubocop-thread_safety
 
 GEM
   remote: https://rubygems.org/
@@ -67,6 +68,8 @@ GEM
     rubocop-rspec (2.2.0)
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
+    rubocop-thread_safety (0.4.2)
+      rubocop (>= 0.53.0)
     ruby-progressbar (1.11.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -85,6 +88,7 @@ DEPENDENCIES
   rubocop-rails
   rubocop-rake
   rubocop-rspec
+  rubocop-thread_safety
 
 BUNDLED WITH
    2.2.15
