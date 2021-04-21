@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rubocop-fairmoney (1.0.1)
+    rubocop-fairmoney (1.0.2)
       rubocop
       rubocop-performance
       rubocop-rails
