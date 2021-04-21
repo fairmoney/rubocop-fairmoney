@@ -34,9 +34,7 @@ Metrics/BlockLength:
     - 'config/environments/*.rb'
     - 'config/routes.rb'
     - 'db/migrate/*_init_schema.rb'
-  IgnoredMethods:
-    - 'describe'
-    - 'context'
+    - 'spec/**/*'
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
