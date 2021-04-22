@@ -2,7 +2,7 @@ AllCops:
   EnabledByDefault: true
   Exclude:
     - 'bin/**/*'
-    - 'db/schema.rb'
+    - 'db/schema.rb' # Auto-generated file
     - 'vendor/**/*'
 
 Bundler/OrderedGems:
@@ -33,8 +33,8 @@ Metrics/BlockLength:
   Exclude:
     - 'config/environments/*.rb'
     - 'config/routes.rb'
-    - 'db/migrate/*_init_schema.rb'
-    - 'spec/**/*'
+    - 'db/migrate/*_init_schema.rb' # Squashed migrations generate a large initial schema
+    - 'spec/**/*' # To avoid duplicating warnings from RSpec/ExampleLength
 
 Naming/VariableNumber:
   EnforcedStyle: snake_case
