@@ -20,4 +20,10 @@ RSpec.describe RuboCop::Cop::Fairmoney::NoIfInTestDescriptions do
       it 'does X when Y' do; end;
     RUBY
   end
+
+  it 'does not crash when there is no test description' do
+    expect_no_offenses(<<~RUBY)
+      it do; end;
+    RUBY
+  end
 end
