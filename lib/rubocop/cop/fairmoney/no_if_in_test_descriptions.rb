@@ -20,7 +20,7 @@ module RuboCop
 
         def on_send(node)
           return unless %i[describe context it xit it_behaves_like].include?(node.method_name)
-          node.first_argument.each_node do |child_node|
+          node.first_argument&.each_node do |child_node|
             child_node.node_parts.each do |description_line|
               next unless description_line.class == String
               parse_description(child_node, description_line)
