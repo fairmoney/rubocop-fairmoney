@@ -104,3 +104,6 @@ Style/MissingElse:
 Style/StringHashKeys:
   Exclude:
     - 'config/routes.rb'
+
+Rails/SchemaComment:
+  Enabled: false
