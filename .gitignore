@@ -12,3 +12,5 @@
 
 # IntelliJ IDEA files
 .idea
+
+.DS_Store

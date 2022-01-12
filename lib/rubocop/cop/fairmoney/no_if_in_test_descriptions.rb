@@ -16,13 +16,15 @@ module RuboCop
       #   it 'raises an error when the category is unknown'
       #
       class NoIfInTestDescriptions < Cop
-        MSG = 'Test descriptions should not include "if", use "when" instead'.freeze
+        MSG = 'Test descriptions should not include "if", use "when" instead'
 
         def on_send(node)
           return unless %i[describe context it xit it_behaves_like].include?(node.method_name)
+
           node.first_argument&.each_node do |child_node|
             child_node.node_parts.each do |description_line|
-              next unless description_line.class == String
+              next unless description_line.instance_of?(String)
+
               parse_description(child_node, description_line)
             end
           end
@@ -38,6 +40,7 @@ module RuboCop
 
         def parse_description(node, description_line)
           return unless description_line.include?(' if ')
+
           add_offense(node)
         end
       end
