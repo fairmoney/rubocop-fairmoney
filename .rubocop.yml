@@ -1,3 +1,12 @@
 Naming/FileName:
  Exclude:
    - lib/rubocop-fairmoney.rb
+
+AllCops:
+  NewCops: enable
+
+Style/Documentation:
+  Enabled: false
+
+Naming/HeredocDelimiterNaming:
+  Enabled: false

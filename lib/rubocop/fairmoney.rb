@@ -1,4 +1,6 @@
-require "rubocop/fairmoney/version"
+# frozen_string_literal: true
+
+require 'rubocop/fairmoney/version'
 
 module RuboCop
   module Fairmoney
