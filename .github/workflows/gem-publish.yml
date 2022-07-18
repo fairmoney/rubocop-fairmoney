@@ -17,7 +17,7 @@ jobs:
     - name: Set up Ruby
       uses: actions/setup-ruby@v1
 
-    - name: Publish to GithHub Packages
+    - name: Publish to GitHub Packages
       run: |
         mkdir -p $HOME/.gem
         touch $HOME/.gem/credentials
